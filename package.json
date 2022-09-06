@@ -2,7 +2,7 @@
   "name": "dsoftware_project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://BenjaSchindler.github.io",
+  "homepage": "https://github.com/BenjaSchindler/Proyecto_DSoftware",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -45,5 +45,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }
