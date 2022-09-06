@@ -1,6 +1,6 @@
 const Blog : React.FC = () => {
     return(
-      <h1>Blog</h1>
+      <h1>Blog 2</h1>
     )  
   }
   
