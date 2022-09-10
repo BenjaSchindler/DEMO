@@ -1,7 +1,13 @@
-const Home : React.FC = () => {
-  return(
-    <h1>Home</h1>
-  )  
-}
+import Carousels from "../Components/Carousels";
+
+const Home: React.FC = () => {
+  return (
+    <>
+      <div>
+        <Carousels/>
+      </div>
+    </>
+  );
+};
 
 export default Home;
