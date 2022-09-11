@@ -3,26 +3,24 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+
+
 const Navigationbar: React.FC = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" sticky='top'>
+    <Navbar className='bg-Nickel' variant="light" expand="lg" sticky='top'>
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/home"><img src='https://i.imgur.com/uwuSHzp.png' className='h-10' alt='logo'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/Home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
+            <Nav.Link href="https://www.instagram.com/inspiraing/">Instagram</Nav.Link>
+            <NavDropdown title="Catalogo" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/Te">Té en hojas</NavDropdown.Item>
+              <NavDropdown.Item href="/Chocolate">
+                Chocolate Caliente
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/Accesorios">Accesorios</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
