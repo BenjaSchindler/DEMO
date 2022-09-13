@@ -16,7 +16,7 @@ const Navigationbar: React.FC = () => {
             <Nav.Link href="/Home">Home</Nav.Link>
             <Nav.Link href="https://www.instagram.com/inspiraing/">Instagram</Nav.Link>
             <NavDropdown title="Catalogo" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/Te">Té en hojas</NavDropdown.Item>
+              <NavDropdown.Item href="/Te">Té en hojas e Infusiones</NavDropdown.Item>
               <NavDropdown.Item href="/Chocolate">
                 Chocolate Caliente
               </NavDropdown.Item>

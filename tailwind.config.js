@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         Nickel: '#717c89',
         PewterBlue: '#90baad',
+      },
+      blur: {
+        xs: '2px',
       }
     },
   },
