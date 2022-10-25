@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navigationbar: React.FC = () => {
   return (
-    <Navbar className='bg-Nickel' variant="light" expand="lg" sticky='top'>
+    <Navbar className='bg-Pumpkin' variant="light" expand="lg" sticky='top'>
       <Container>
         <Navbar.Brand href="/home"><img src='https://i.imgur.com/uwuSHzp.png' className='h-10' alt='logo'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
