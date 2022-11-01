@@ -1,26 +1,108 @@
+import { useState } from "react";
+
 interface CardProps {
-    products: CardModel;
+  products: CardModel;
 }
 
 interface CardModel {
-    title: string;
-    img: string;
-    info: string;
-    style: string;
+  title: string;
+  img: string;
+  price: number;
+  stock: number;
 }
 
 const Card: React.FC<CardProps> = ({
-    products:{ title, img, info },
+  products: { title, img, price, stock },
 }) => {
-    return (
-
-        <a href="/#" className="flex flex-col items-center bg-black rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-        <img className="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={img} alt={title}/>
-            <div className="flex flex-col justify-between p-4 leading-normal">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{info}</h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+  const [count, setCount] = useState(0);
+  if (count < 0) {
+    setCount(0);
+  }
+  return (
+    <div className="w-80 bg-Beige shadow rounded">
+        <div className="h-48 w-full bg-gray-200 bg-cover bg-center">
+            <div className="relative">
+                <img className="object-cover w-80 h-60 pb-3" src={img} alt={title} />
+                    <div className="absolute bottom-6 left-4">
+                    {stock > 0 ? (
+                    <span className="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
+                        Disponible
+                    </span>
+                    ) : (
+                    <span className="uppercase text-xs bg-green-50 p-0.5 border-red-500 border rounded text-red-700 font-medium select-none">
+                        Sin Stock
+                    </span>
+                    )}
+                </div>
             </div>
-        </a>
-)};
+        </div>
+        <div className="p-4 flex flex-col items-center">
+            <h1 className="font-bold text-4xl mb-2 pt-4 text-center">{title}</h1>
+            <p className="font-bold text-2xl mb-1 text-center">{price}</p>
+            <div className="inline-flex items-center mt-2">
+                <button
+                    className="bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200"
+                    onClick={() => setCount(count - 1)}
+                >
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 12H4"
+                    />
+                    </svg>
+                </button>
+                <div className="bg-gray-100 border-t border-b border-gray-100 text-gray-600 hover:bg-gray-100 inline-flex items-center px-4 py-1 select-none">
+                    {count}
+                </div>
+            <button
+                className="bg-white rounded-r border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200"
+                onClick={() => setCount(count + 1)}
+            >
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4v16m8-8H4"
+                />
+                </svg>
+            </button>
+        </div>
+
+            <button className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center">
+            Agregar al carrito
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 ml-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+            </svg>
+            </button>
+        </div>
+    </div>
+  );
+};
 
 export default Card;

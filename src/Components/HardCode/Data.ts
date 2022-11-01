@@ -17,53 +17,70 @@ export const datos: { title: string[]; img: string[]; description: string[] } =
     ],
   };
 
-export const CardData: { title: string; img: string; info: string, style: string }[] = [
+export const CardData: { title: string; img: string; info: string, style: string, price: number, stock: number }[] = [
   {
     title: "te",
     img: "https://i.imgur.com/lISnc7s.jpg",
     info: "TE",
-    style: "row-start-1 col-start-1"
+    style: "row-start-1 col-start-1",
+    price: 2500,
+    stock: 0
+
   },
   {
     title: "te",
-    img: "https://i.imgur.com/lISnc7s.jpg",
+    img: "https://i.imgur.com/dLM8Ema.jpg",
     info: "TE",
-    style: "row-start-1 col-start-2"
+    style: "row-start-1 col-start-2",
+    price: 2500,
+    stock: 20
   },
   {
       title: "te",
       img: "https://i.imgur.com/lISnc7s.jpg",
       info: "TE",
-      style: "col-span-1 row-start-1 col-start-3"
+      style: "col-span-1 row-start-1 col-start-3",
+      price: 2500,
+      stock: 20
   },
   {
     title: "te",
     img: "https://i.imgur.com/lISnc7s.jpg",
     info: "TE",
-    style: "col-span-1 row-start-1 col-start-4"
+    style: "col-span-1 row-start-1 col-start-4",
+    price: 2500,
+    stock: 20
   },
   {
     title: "te",
     img: "https://i.imgur.com/lISnc7s.jpg",
     info: "TE",
-    style: "col-span-1 row-start-2 col-start-1"
+    style: "col-span-1 row-start-2 col-start-1",
+    price: 2500,
+    stock: 20
   },
   {
     title: "te",
     img: "https://i.imgur.com/lISnc7s.jpg",
     info: "TE",
-    style: "col-span-1 row-start-2 col-start-2"
+    style: "col-span-1 row-start-2 col-start-2",
+    price: 2500,
+    stock: 20
   },
   {
     title: "te",
     img: "https://i.imgur.com/lISnc7s.jpg",
     info: "TE",
-    style: "col-span-1 row-start-2 col-start-3"
+    style: "col-span-1 row-start-2 col-start-3",
+    price: 2500,
+    stock: 0
   },
   {
-    title: "te",
+    title: "tesito",
     img: "https://i.imgur.com/lISnc7s.jpg",
     info: "TE",
-    style: "col-span-1 row-start-2 col-start-4"
+    style: "col-span-1 row-start-2 col-start-4",
+    price: 2500,
+    stock: 0
   }
 ];
