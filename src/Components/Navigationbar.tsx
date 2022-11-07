@@ -1,11 +1,18 @@
+import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { clearSessionStorage, getCookie } from '../Services/CookiesHelper';
 
 
+const Authorization = getCookie('token')
+function refreshPage() {
+  window.location.reload();
+}
 
 const Navigationbar: React.FC = () => {
+
   return (
     <Navbar className='bg-Pumpkin' variant="light" expand="lg" sticky='top'>
       <Container>
@@ -22,6 +29,11 @@ const Navigationbar: React.FC = () => {
               </NavDropdown.Item>
               <NavDropdown.Item href="/Accesorios">Accesorios</NavDropdown.Item>
             </NavDropdown>
+            {Authorization == undefined?
+            <Button variant="outline-success" href="/Login">Log In</Button>
+            :
+            <Button variant="outline-success" onClick={() => { clearSessionStorage(); refreshPage();}}>Log Out</Button>
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>
