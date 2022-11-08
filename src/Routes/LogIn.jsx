@@ -10,9 +10,6 @@ function loginUser(credentials) {
   apiurl.post('/login', credentials).then(({data})=>data)
 )}
 
-
-
-
 export default function Login() {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");

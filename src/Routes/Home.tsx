@@ -6,15 +6,15 @@ import ClassCard from '../Components/ClassCard';
 import { CardData, datos } from '../Components/HardCode/Data';
 import { getCookie } from '../Services/CookiesHelper';
 
-console.log(getCookie('token'))
 var isAuthorized = false
 if (getCookie('token') != ""){
   isAuthorized = true
 }
 
 
-const Home: React.FC = () => {
 
+
+const Home: React.FC = () => {
   const probarDatos = () => {
     const token = getCookie('token')
     fetch('http://localhost:3001/api/posts', {
@@ -89,49 +89,6 @@ const Home: React.FC = () => {
         </div>
       </div>
     </div>
-
-      {/*<div className='grid grid-cols-4 bg-Beige h-full divide-y w-full'>
-        <div className='w-full divide-y row-span-6 col-span-4 lg:h-1/2'>
-          <div className='col-span-4 row-span-4'>
-            <CarouselComponent items={datos}/>
-          </div>
-          <div className='col-span-4 row-span-2 h-[20vh] items-center grid justify-items-center sm:h-[20vh]'>
-            <NavTab/>
-          </div>
-        </div>  
-
-        <div className='col-span-4 row-span-1 relative h-fit content-center'>
-          <section id="Acerca de Nosotros"/>
-          <img className='object-cover blur-xs w-screen h-fit' src='https://i.imgur.com/mFm4CVD.jpg' alt='Tea'/>
-          <p className='absolute'>
-            Acerca de Nosotros
-            <span className='absolute'>Somos una empresa dedicada a la venta y distribución de variedades de té e infusiones. Contamos con más de 15 años de experiencia y con la confianza de clientes como Work Café Santander y La Fuente Reina. Dentro de nuestros productos puedes encontrar Deslumbra Té Gourmet, Mezclas de té fino en Hojas, Accesorios para preparar té en hojas, Chocolate Caliente Wilef, Venta de Café Arábica y Regalos únicos.</span>
-          </p>
-           <p className='text-white font-mono pb-1 font-bold text-2xl absolute inset-x-0 top-20 text-center sm:text-6xl md:text-8xl sm:top-10'>Acerca de Nosotros</p>
-          <p className='text-white text-center font-mono font-bold text-sm absolute bottom-20 left-1 sm:text-2xl sm:bottom-20  md:bottom-10'>Somos una empresa dedicada a la venta y distribución de variedades de té e infusiones. Contamos con más de 15 años de experiencia y con la confianza de clientes como Work Café Santander y La Fuente Reina. Dentro de nuestros productos puedes encontrar Deslumbra Té Gourmet, Mezclas de té fino en Hojas, Accesorios para preparar té en hojas, Chocolate Caliente Wilef, Venta de Café Arábica y Regalos únicos.</p> 
-        </div>
-
-        <div className='col-span-4 row-span-3 h-full w-full content-center mb-10'>
-          <h1 className='text-white font-mono font-bold text-center text-2xl inset-x-0 top-20 left-1/4 sm:text-8xl'>Nuestros Productos</h1>
-        </div>
-        
-        {CardData?.length > 0 ? (
-            <>
-
-            {CardData.map((dato) => (
-              <div className={`'col-span-1 '${dato.style}`}>
-                <Card products={dato}/>
-              </div>
-            ))}
-            </>
-
-        ) : (
-          <div>
-            <h2>No data found sorry :c</h2>
-          </div>
-        )}
-      </div>*
-     */}
     </>
   );
 };

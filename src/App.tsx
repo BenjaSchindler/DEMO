@@ -10,7 +10,6 @@ import { getCookie } from './Services/CookiesHelper';
 
 const App = () => {
   const token = getCookie('token')
-  console.log(token)
   function isAuthorized() {
     if (token == undefined){
       return false

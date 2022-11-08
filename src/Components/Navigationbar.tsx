@@ -1,17 +1,33 @@
+import jwtDecode from 'jwt-decode';
 import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { clearSessionStorage, getCookie } from '../Services/CookiesHelper';
-
+import { clearSessionStorage, getCookie, setCookie } from '../Services/CookiesHelper';
+import jwt_decode from 'jwt-decode'
 
 const Authorization = getCookie('token')
 function refreshPage() {
   window.location.reload();
 }
 
+console.log(getCookie('token'))
+const token = getCookie('token')
+const decoded = String(token)
+
 const Navigationbar: React.FC = () => {
+  /*
+  if (decoded == "") {
+    console.log('sad')
+  }else{
+    const data = jwt_decode(decoded)
+    const data2 = String(data)
+    const data1 = JSON.parse(data2)
+    console.log(data1)
+  }
+ */  
+
 
   return (
     <Navbar className='bg-Pumpkin' variant="light" expand="lg" sticky='top'>
@@ -32,7 +48,10 @@ const Navigationbar: React.FC = () => {
             {Authorization == undefined?
             <Button variant="outline-success" href="/Login">Log In</Button>
             :
-            <Button variant="outline-success" onClick={() => { clearSessionStorage(); refreshPage();}}>Log Out</Button>
+            <>
+              <Button variant="outline-success" onClick={() => { clearSessionStorage(); refreshPage();}}>Log Out</Button>
+              <Nav.Link href="/Home">{'a'}</Nav.Link>
+            </>
             }
           </Nav>
         </Navbar.Collapse>
