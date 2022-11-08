@@ -1,3 +1,6 @@
+### Link Trello: https://trello.com/invite/b/2XqJVeUQ/ATTI709318bda749a9d051ebc574af93422a6B9C1E37/proyecto
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
