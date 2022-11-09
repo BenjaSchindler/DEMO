@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { apiurl } from "../Services/apiuwu";
-import { getCookie, setCookie } from "../Services/CookiesHelper";
+import { setCookie } from "../Services/CookiesHelper";
 
 
 

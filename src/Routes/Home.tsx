@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import { useEffect } from 'react';
 import Card from '../Components/Card';
 import CarouselComponent from '../Components/Carousels';
 import ClassCard from '../Components/ClassCard';
@@ -15,6 +14,7 @@ if (getCookie('token') != ""){
 
 
 const Home: React.FC = () => {
+  /*
   const probarDatos = () => {
     const token = getCookie('token')
     fetch('http://localhost:3001/api/posts', {
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
       probarDatos()
     },[]
     )
-
+    */
   return (
     <>
     <div className='grid grid-cols-4 bg-white h-full w-full'>

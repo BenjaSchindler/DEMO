@@ -1,32 +1,18 @@
-import jwtDecode from 'jwt-decode';
 import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { clearSessionStorage, getCookie, setCookie } from '../Services/CookiesHelper';
-import jwt_decode from 'jwt-decode'
+import { getCookie } from '../Services/CookiesHelper';
+import User from './User';
+import Cookies from 'js-cookie';
 
 const Authorization = getCookie('token')
 function refreshPage() {
   window.location.reload();
 }
 
-console.log(getCookie('token'))
-const token = getCookie('token')
-const decoded = String(token)
-
 const Navigationbar: React.FC = () => {
-  /*
-  if (decoded == "") {
-    console.log('sad')
-  }else{
-    const data = jwt_decode(decoded)
-    const data2 = String(data)
-    const data1 = JSON.parse(data2)
-    console.log(data1)
-  }
- */  
 
 
   return (
@@ -45,13 +31,14 @@ const Navigationbar: React.FC = () => {
               </NavDropdown.Item>
               <NavDropdown.Item href="/Accesorios">Accesorios</NavDropdown.Item>
             </NavDropdown>
-            {Authorization == undefined?
-            <Button variant="outline-success" href="/Login">Log In</Button>
-            :
-            <>
-              <Button variant="outline-success" onClick={() => { clearSessionStorage(); refreshPage();}}>Log Out</Button>
-              <Nav.Link href="/Home">{'a'}</Nav.Link>
-            </>
+            {typeof Authorization == 'undefined'?
+              <Button variant="outline-success" href="/Login">Log In</Button>
+              :
+              <>
+                <User/>
+                <Navbar.Brand href="/home"><img src='https://i.imgur.com/b5yRiNy.png' className='h-10' alt='logo'/></Navbar.Brand>
+                <Button variant="outline-success" onClick={() => {Cookies.remove('token'); refreshPage();}}>Log Out</Button>
+              </>
             }
           </Nav>
         </Navbar.Collapse>

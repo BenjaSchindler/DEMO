@@ -15,11 +15,11 @@ app.get("/api", (req , res) => {
 
 
 const users = [ 'uai', 'benja', 'juandiego'];
-const password = ['uai', 'benja', 'juandiego']
+const passwords = ['uai', 'benja', 'juandiego']
 
 let usuarios = [
     {
-    "name": "juan",
+    "name": "juandiego",
     "email": "jgaldames@alumnos.uai.cl",
     "birthdate": "11-04-2000",
     "id": 1
@@ -39,7 +39,7 @@ app.post("/api/login", (req , res) =>{
         password: req.body.password
     }
     let datos = userData(req.body.username)
-
+    console.log('datos pedidos')
     if (isUser(req.body.username, req.body.password)){
         jwt.sign({datos}, 'secretkey', {expiresIn: "3m"}, (err, token) => {
             res.json({
@@ -69,7 +69,7 @@ function userData(user){
 }
 
 function isUser(user, password){
-    if (users.includes(user) && password.includes(user)){
+    if (users.includes(user) && passwords.includes(password)){
         return true
     }else {
         return false
