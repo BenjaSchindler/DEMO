@@ -7,6 +7,7 @@ import Footer from './Components/Footer';
 import Login from './Routes/LogIn';
 import { useState } from 'react';
 import { getCookie } from './Services/CookiesHelper';
+import UserProfile from './Components/UserProfile';
 
 const App = () => {
   const token = getCookie('token')
@@ -23,6 +24,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="Home" element={<Home />} />
         <Route path="Login" element={<Login />} />
+        <Route
+              path="/user/:id"
+              element={<UserProfile/>}
+            />
       </Routes>
       <Footer/>
     </>

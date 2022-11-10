@@ -6,6 +6,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { getCookie } from '../Services/CookiesHelper';
 import User from './User';
 import Cookies from 'js-cookie';
+import { Link } from 'react-router-dom';
+import { decode } from '../Services/Autho';
 
 const Authorization = getCookie('token')
 function refreshPage() {
@@ -36,7 +38,13 @@ const Navigationbar: React.FC = () => {
               :
               <>
                 <User/>
-                <Navbar.Brand href="/home"><img src='https://i.imgur.com/b5yRiNy.png' className='h-10' alt='logo'/></Navbar.Brand>
+                <Link
+                    to={{
+                      pathname: `/user/${decode(getCookie('token')).datos.name}`
+                    }}
+                  >
+                <Navbar.Brand><img src='https://i.imgur.com/b5yRiNy.png' className='h-10' alt='logo'/></Navbar.Brand>
+                </Link>
                 <Button variant="outline-success" onClick={() => {Cookies.remove('token'); refreshPage();}}>Log Out</Button>
               </>
             }
