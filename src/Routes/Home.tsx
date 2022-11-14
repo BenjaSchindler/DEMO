@@ -1,9 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import Card from '../Components/Card';
 import CarouselComponent from '../Components/Carousels';
 import ClassCard from '../Components/ClassCard';
 import { CardData, datos } from '../Components/HardCode/Data';
+import { StoreItem } from '../Components/StoreItem';
 import { getCookie } from '../Services/CookiesHelper';
+import storeItems from "../data/items.json"
+import { Card } from '../Components/Card';
 
 var isAuthorized = false
 if (getCookie('token') != ""){
@@ -56,9 +58,9 @@ const Home: React.FC = () => {
         {CardData?.length > 0 ? (
               <>
               
-              {CardData.map((dato) => (
+              {storeItems.map((item) => (
                 <div className={`'col-span-1'`}>
-                  <Card products={dato}/>
+                  <Card {...item} />
                 </div>
               ))}
               </>

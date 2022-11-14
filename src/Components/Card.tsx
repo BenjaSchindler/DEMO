@@ -1,48 +1,37 @@
-import { useState } from "react";
+import { title } from "process"
+import { useShoppingCart } from "../context/ShoppingCartContext"
+import { formatCurrency } from "../utilities/formatCurrency"
 
-interface CardProps {
-  products: CardModel;
-}
-
-interface CardModel {
-  title: string;
-  img: string;
-  price: number;
-  stock: number;
-}
-
-const Card: React.FC<CardProps> = ({
-  products: { title, img, price, stock },
-}) => {
-  const [count, setCount] = useState(0);
-  if (count < 0) {
-    setCount(0);
+type StoreItemProps = {
+    id: number
+    name: string
+    price: number
+    imgUrl: string
   }
+
+export function Card({ id, name, price, imgUrl }: StoreItemProps) {
+    const {
+      getItemQuantity,
+      increaseCartQuantity,
+      decreaseCartQuantity,
+    } = useShoppingCart()
+    const quantity = getItemQuantity(id)
+  
   return (
     <div className="w-80 bg-Beige shadow rounded">
-        <div className="h-48 w-full bg-gray-200 bg-cover bg-center">
+        <div className="h-50 w-full bg-gray-200 bg-cover bg-center">
             <div className="relative">
-                <img className="object-cover w-80 h-60 pb-3" src={img} alt={title} />
-                    <div className="absolute bottom-6 left-4">
-                    {stock > 0 ? (
-                    <span className="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
-                        Disponible
-                    </span>
-                    ) : (
-                    <span className="uppercase text-xs bg-green-50 p-0.5 border-red-500 border rounded text-red-700 font-medium select-none">
-                        Sin Stock
-                    </span>
-                    )}
-                </div>
+                <img className="object-cover w-80 h-30 " src={imgUrl} alt={name} />
+
             </div>
         </div>
         <div className="p-4 flex flex-col items-center">
             <h1 className="font-bold text-4xl mb-2 pt-4 text-center">{title}</h1>
-            <p className="font-bold text-2xl mb-1 text-center">{price}</p>
+            <p className="font-bold text-2xl mb-1 text-center">{formatCurrency(price)}</p>
             <div className="inline-flex items-center mt-2">
                 <button
                     className="bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200"
-                    onClick={() => setCount(count - 1)}
+                    onClick={() => decreaseCartQuantity(id)}
                 >
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -60,11 +49,11 @@ const Card: React.FC<CardProps> = ({
                     </svg>
                 </button>
                 <div className="bg-gray-100 border-t border-b border-gray-100 text-gray-600 hover:bg-gray-100 inline-flex items-center px-4 py-1 select-none">
-                    {count}
+                {quantity}
                 </div>
             <button
                 className="bg-white rounded-r border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200"
-                onClick={() => setCount(count + 1)}
+                onClick={() => increaseCartQuantity(id)}
             >
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,4 +94,3 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
-export default Card;
