@@ -4,7 +4,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { getCookie } from '../Services/CookiesHelper';
-import User from './User';
 import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
 import { decode } from '../Services/Autho';
@@ -13,10 +12,10 @@ const Authorization = getCookie('token')
 function refreshPage() {
   window.location.reload();
 }
-
+function redirect() {
+  window.location.href = 'http://localhost:3000/'
+}
 const Navigationbar: React.FC = () => {
-
-
   return (
     <Navbar className='bg-Pumpkin' variant="light" expand="lg" sticky='top'>
       <Container>
@@ -33,19 +32,25 @@ const Navigationbar: React.FC = () => {
               </NavDropdown.Item>
               <NavDropdown.Item href="/Accesorios">Accesorios</NavDropdown.Item>
             </NavDropdown>
+            </Nav>
+            <Nav>
             {typeof Authorization == 'undefined'?
-              <Button variant="outline-success" href="/Login">Log In</Button>
+              <Button variant="outline-dark" href="/login">Log In</Button>
               :
               <>
-                <User/>
+               <NavDropdown title={<span className='flex items-center justify-start'><img src='https://i.imgur.com/b5yRiNy.png' className="object-contain h-10 w-10" alt='usericon'/> {decode(getCookie('token')).datos.name} </span>} id="basic-nav-dropdown">
                 <Link
                     to={{
                       pathname: `/user/${decode(getCookie('token')).datos.name}`
                     }}
                   >
-                <Navbar.Brand><img src='https://i.imgur.com/b5yRiNy.png' className='h-10' alt='logo'/></Navbar.Brand>
+                  <NavDropdown.Divider />
+                  <Button variant="outline-dark"><img src='https://i.imgur.com/b5yRiNy.png' className='h-10' alt='logo'/>Mi Perfil</Button>
                 </Link>
-                <Button variant="outline-success" onClick={() => {Cookies.remove('token'); refreshPage();}}>Log Out</Button>
+                <Link to='/Home'>
+                <Button variant="outline-warning" onClick={() => {Cookies.remove('token'); refreshPage();}}>Log Out</Button>
+                </Link>
+               </NavDropdown>
               </>
             }
           </Nav>
