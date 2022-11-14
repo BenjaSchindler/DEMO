@@ -1,0 +1,50 @@
+[
+  {
+    "id": 10,
+    "name": "Chocolate caliente-Sin Azúcar (1500g)",
+    "price": 25000,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/24116313/resize/255/255?1652399767"
+  },
+  {
+    "id": 11,
+    "name": "Chocolate caliente (1500g)",
+    "price": 21500,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/24116308/resize/255/255?1652399844"
+  },
+  {
+    "id": 3,
+    "name": "Chocolate caliente-Sin Azúcar (1000g)",
+    "price": 19000,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/24116313/resize/255/255?1652399767"
+  },
+  {
+    "id": 5,
+    "name": "Chocolate caliente (1000g)",
+    "price": 16200,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/24116308/resize/255/255?1652399844"
+  },
+  {
+    "id": 6,
+    "name": "Chocolate caliente-Sin Azúcar (500g)",
+    "price": 9900,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/24116313/resize/255/255?1652399767"
+  },
+  {
+    "id": 7,
+    "name": "Chocolate caliente (500g)",
+    "price": 8900,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/24116308/resize/255/255?1652399844"
+  },
+  {
+    "id": 8,
+    "name": "Chocolate caliente-Sin Azúcar (250g)",
+    "price": 6400,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/24116313/resize/255/255?1652399767"
+  },
+  {
+    "id": 9,
+    "name": "Chocolate caliente (250g)",
+    "price": 5200,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/24116308/resize/255/255?1652399844"
+  }
+]

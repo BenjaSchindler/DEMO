@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Té Negro-Afternoon (50g)",
+    "price": 4100,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/4025853/resize/255/255?1652823169"
+  },
+  {
+    "id": 2,
+    "name": "Té Negro Earl Grey (50g) ",
+    "price": 4100,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/4047007/resize/255/255?1652823215"
+  },
+  {
+    "id": 3,
+    "name": "Rooibos Caramelo (50g)",
+    "price": 4100,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/4015105/resize/255/255?1652404072"
+  },
+  {
+    "id": 4,
+    "name": "Te Oolong (50g)",
+    "price": 4800,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/4015070/resize/255/255?1652404139"
+  },
+  {
+    "id": 5,
+    "name": "Té Negro - Coconut Grove (50g)",
+    "price": 4100,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/4046981/resize/255/255?1652823177"
+  },
+  {
+    "id": 6,
+    "name": "Té Negro - Berryblu Arandano (50g)",
+    "price": 4500,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/4043938/resize/255/255?1652823088"
+  },
+  {
+    "id": 7,
+    "name": "Té Negro - Frutos del Bosque (50g)",
+    "price": 4100,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/4014912/resize/255/255?1652821895"
+  },
+  {
+    "id": 8,
+    "name": "Té Rojo - Pu Erh Berries (50g)",
+    "price": 4500,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/3983816/resize/255/255?1652402609"
+  },
+  {
+    "id": 9,
+    "name": "Infusión Lavanda (20g)",
+    "price": 4400,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/4015433/resize/255/255?1644365194"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 10,
+    "name": "Tetera Infusionador 450ml",
+    "price": 19990,
+    "imgUrl": "https://dojiw2m9tvv09.cloudfront.net/14504/product/tetera-infusionador-la-pra-ctica-inspira-gourmet-16086.jpg?297"
+  },
+  {
+    "id": 11,
+    "name": "Tazón 300ml 12 Unidades",
+    "price": 15000,
+    "imgUrl": "https://dojiw2m9tvv09.cloudfront.net/14504/product/tazo-n-transparente-300ml6822.jpg?297"
+  },
+  {
+    "id": 3,
+    "name": "Filtro Individual 40 Unidades",
+    "price": 19000,
+    "imgUrl": "https://dojiw2m9tvv09.cloudfront.net/14504/product/filtros-de-te-inspira9472.jpg?297"
+  },
+  {
+    "id": 5,
+    "name": "Filtro Individual 500 Unidades",
+    "price": 24000,
+    "imgUrl": "https://dojiw2m9tvv09.cloudfront.net/14504/product/filtros-de-te-inspira9472.jpg?297"
+  },
+  {
+    "id": 6,
+    "name": "Filtro Individual 1000 Unidades",
+    "price": 45000,
+    "imgUrl": "https://dojiw2m9tvv09.cloudfront.net/14504/product/filtros-de-te-inspira9472.jpg?297"
+  },
+  {
+    "id": 7,
+    "name": "Filtro Infusor Acero Inoxidable",
+    "price": 9900,
+    "imgUrl": "https://cdnx.jumpseller.com/inspiragourmet/image/24117118/resize/255/255?1652402062"
+  }
+]
