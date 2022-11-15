@@ -1,4 +1,4 @@
-export const datos: { title: string[]; img: string[]; description: string[] } =
+export const datos: { title: string[]; img: string[]; description: string[]; page: string[] } =
   {
     title: [
       "La mejor manera de comenzar la semana es junto a un té de inspira",
@@ -15,6 +15,11 @@ export const datos: { title: string[]; img: string[]; description: string[] } =
       "Elaborado con una selección de granos de cacao de Ecuador y Nueva Guinea",
       "",
     ],
+    page: [
+      "/Te",
+      "Elaborado con una selección de granos de cacao de Ecuador y Nueva Guinea",
+      "",
+    ]
   };
 
 export const CardData: { title: string; img: string; info: string, style: string, price: number, stock: number }[] = [

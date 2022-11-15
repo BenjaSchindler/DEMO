@@ -13,9 +13,6 @@ const Authorization = getCookie('token')
 function refreshPage() {
   window.location.reload();
 }
-function redirect() {
-  window.location.href = 'http://localhost:3000/'
-}
 const Navigationbar: React.FC = () => {
   const { openCart, cartQuantity } = useShoppingCart()
   return (
@@ -52,7 +49,9 @@ const Navigationbar: React.FC = () => {
                 </Link>
                 <NavDropdown.Divider />
                 <Link to='/Home'>
-                <Button variant="outline-warning" onClick={() => {Cookies.remove('token'); refreshPage();}}>Log Out</Button>
+                  <Button variant="outline-dark" className='flex justify-self-center' onClick={() => {Cookies.remove('token'); refreshPage();}}>
+                    Log Out
+                  </Button>
                 </Link>
                </NavDropdown>
               </>

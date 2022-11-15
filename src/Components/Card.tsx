@@ -1,4 +1,3 @@
-import { title } from "process"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 import { formatCurrency } from "../utilities/formatCurrency"
 
@@ -21,12 +20,12 @@ export function Card({ id, name, price, imgUrl }: StoreItemProps) {
     <div className="w-80 bg-Beige shadow rounded">
         <div className="h-50 w-full bg-gray-200 bg-cover bg-center">
             <div className="relative">
-                <img className="object-cover w-80 h-30 " src={imgUrl} alt={name} />
+                <img className="object-cover w-80 h-50 " src={imgUrl} alt={name} />
 
             </div>
         </div>
         <div className="p-4 flex flex-col items-center">
-            <h1 className="font-bold text-4xl mb-2 pt-4 text-center">{title}</h1>
+            <h1 className="font-bold text-4xl mb-2 pt-4 text-center">{name}</h1>
             <p className="font-bold text-2xl mb-1 text-center">{formatCurrency(price)}</p>
             <div className="inline-flex items-center mt-2">
                 <button

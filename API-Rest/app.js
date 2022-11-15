@@ -20,12 +20,14 @@ const passwords = ['uai', 'benja', 'juandiego']
 let usuarios = [
     {
     "name": "juandiego",
+    "username": "Juan  Diego",
     "email": "jgaldames@alumnos.uai.cl",
     "birthdate": "11-04-2000",
     "id": 1
     },
     {
       "name": "benja",
+      "username": "Benjamin Schindler",
       "email": "bschindler@alumnos.uai.cl",
       "birthdate": "11-04-2000",
       "id": 2
